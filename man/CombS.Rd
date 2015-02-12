@@ -1,55 +1,60 @@
 \name{CombS}
 \alias{CombS}
-
+%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-The combinatory method(s) for constructing partially balanced incomplete block designs
+The Combinatory Method (s) for the construction of rectangular PBIB designs
 }
 \description{
-Construction of partially balanced incomplete block designs associated with rectangular right anglular association schemes (m) and we derive their parameters.
+The application of the Combinatory Method (s), with s chosen in [2, l-1], on rectangular association scheme to obtain the configuration and the parameters of the PBIB design associated.
 }
 \usage{
-CombS(n, l, S)
+CombS(n, l, s)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{n}{
-Number of lines in the association schemes.
+Number of lines of the association schemes array
 }
   \item{l}{
-Number of colons in the association schemes.
+Number of columns of the association schemes array
 }
-  \item{S}{
-Number of treatments token from the same row of the association scheme.
+  \item{s}{
+Number of the token treatments from the same row of the association scheme
 }
 }
 \details{
-For 2 < S < l associated with a rectangular association scheme, allow to obtain a rectangular PBIB design.
+For 2 < s < l, we obtain a rectangular PBIB design.
 
-For S = l, the combinatory method (s) can also be used for the construction of singular group divisible designs.
-}
+For s = l, we obtain a singular group divisible designs.}
 \value{
 A LIST :
 \item{PBIB }{The configuration of the PBIB.}
 \item{Type }{The type of the design}
-\item{V }{Number of treatments in the PBIB.}
+\item{V }{Number of treatments.}
 \item{B }{Number of blocs.}
 \item{R }{Repetition of each treatment.}
-\item{K }{Size of each blocks.}
+\item{K }{Size of blocs.}
 \item{lamda }{Vector of m-lambda.}
+\item{Resolvable }{Is the design Resolvable ?}
 }
 \references{
-Imane Rezgui, Z.Gheribi-Aoulmi and H. Monod, New association schemes with 4, 5 and 7 associated classes and their associated partially balanced incomplete block designs; Advances and Applications in Discrete Mathematics Vol.12 Issue 2 (to appear).
+Imane Rezgui, Z. Gheribi-Aoulmi (2014). New construction method of rectangular partially balanced incomplete block designs and singular group divisible designs, Journal of Mathematics and Statistics, 10, 45- 48. http://www.thescipub.com/jmss.toc 
+
+M.N. Vartak 1955. On an application of Kronecker product of Matrices to Statistical designs. Ann. Math. Stat.,26(420-438).
 }
-\author{Mohamed LAIB, Imane Rezgui, Zoubida Gheribi-Aoulmi and Herve Monod}
+\author{
+Mohamed Laib, Imane Rezgui, Zebida Gheribi-Aoulmi and Herve Monod
+}
+\note{
+Mohamed Laib <laib.med@gmail.com>
+}
+
+
 \examples{
 n<-3
-l<-4
-#Rectangular PBIB designs :
-S<-3
-CombS(n,l,S)
-#Singular group divisible designs :
-S<-4
-CombS(n,l,S)
+l<-3
+s<-2
+CombS(l,n,s)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
